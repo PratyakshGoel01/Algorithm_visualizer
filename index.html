@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&family=Stick+No+Bills:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="head">Sorting Visualizer</section>
+    <div class="navbar">
+        <button id="new_array" class="btn-1" onclick="generate()">New Array</button>
+            <div class="dynamic_bar">
+                <label for="values" style="padding-left: 3rem;">Number of Array:</label>
+                <input type="range" id="range" name="range" min="1" max="10" onchange="dynamicBars(this.value)">
+                <label for="speed" style="padding-left: 2rem;">Speed</label>
+                <input type="range" id="speed_range" name="range" value="1" min="1" max="10">
+            </div>
+        <div class="btn-sort">
+            <button  id="sortBubble" class="btn" onclick="bubbleSort()">Bubble Sort</button>
+            <button  id="sortInertion" class="btn" onclick="insertionSort()">Insertion Sort</button>
+            <button  id="sortSelection" class="btn" onclick="selectionSort()">Selection Sort</button>
+            <button  id="sortQuick" class="btn" onclick="quicksort()">Quick Sort</button>
+            <button  id="sort" class="btn">Merge Sort</button>
+        </div>
+    <section id="bars-container"></section>
+</div>
+</body>
+
+<script src="sorting.js"></script>
+<script src="bubble_sort.js"></script>
+<script src="merge_sort.js"></script>
+<script src="quick_sort.js"></script>
+<script src="insertion_sort.js"></script>
+<script src="selection_sort.js"></script>
+
+<footer>
+    <p class="footer">
+        Made By Suresh Shukla
+    </p>
+</footer>
+
+</html>
